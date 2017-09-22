@@ -17,6 +17,6 @@ SDCLANG_FORCED ?= false
 
 SDCLANG_PATH := vendor/qcom/sdclang-3.8/linux-x86/bin
 
-SDCLANG_LTO_DEFS := vendor/xos/sdclang/sdllvm-lto-defs.mk
+SDCLANG_LTO_DEFS := vendor/aim/sdclang/sdllvm-lto-defs.mk
 
 SDCLANG_COMMON_FLAGS := -O3 -fvectorize-loops
