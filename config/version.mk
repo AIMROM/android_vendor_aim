@@ -43,6 +43,8 @@ ifeq ($(AIM_RELEASE), true)
 			AIM_BUILD_TYPE := UNOFFICIAL
 		endif
 	endif
+else
+	AIM_BUILD_TYPE := UNOFFICIAL
 endif
 
 # Set all versions
