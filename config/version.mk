@@ -33,7 +33,7 @@ ifeq ($(AIM_RELEASE), true)
 		#Remove existing key.list
 		RM_KEY=$(shell rm -rf vendor/cos/md5.list)
 		#Key list, needs to be updated if keys change
-		MD5_LIST=$(shell curl -s https://raw.githubusercontent.com/AIMROM/platform_vendor_aim/o/config/md5.list)
+		MD5_LIST=$(shell curl -s https://raw.githubusercontent.com/AIMROM/android_vendor_aim/o/config/md5.list)
 		FILTER_MD5=$(filter $(CURRENT_MD5), $(MD5_LIST))
 		ifeq ($(FILTER_MD5), $(CURRENT_MD5))
 			CHECKS=true
