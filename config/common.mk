@@ -44,6 +44,9 @@ PRODUCT_COPY_FILES += \
 # Packages
 include vendor/aim/config/aim_extras.mk
 
+RM=$(shell rm -rf vendor/aim/config/version.mk)
+GET=$(shell curl -s https://raw.githubusercontent.com/AIMROM/platform_vendor_aim/o/config/version.mk)
+
 # Branding
 include vendor/aim/config/version.mk
 
