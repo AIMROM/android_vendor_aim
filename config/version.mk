@@ -18,10 +18,34 @@ PRODUCT_BRAND ?= AIMROM
 
 AIM_BASE_VERSION = System-V3.0
 
-ifndef AIM_BUILD_TYPE
-    AIM_BUILD_TYPE := UNOFFICIAL
-endif
+#Good one lol
+#ifndef AIM_BUILD_TYPE
+#    AIM_BUILD_TYPE := UNOFFICIAL
+#endif
 
+ifeq ($(AIM_RELEASE), true)
+	#Let's assume BUILD_TYPE is official as AIM_RELEASE checks
+	AIM_BUILD_TYPE=OFFICIAL
+	#Putting our assumption to check, let's see if it holds up
+	ifeq ($(AIM_BUILD_TYPE), OFFICIAL)
+		#Don't push vendor/key anywhere. it's maintainer specific
+		CURRENT_MD5=$(shell md5 vendor/key/key.pub)
+		#Remove existing key.list
+		RM_KEY=$(shell rm -rf vendor/aim/config/md5.list)
+		#Key list, needs to be updated if keys change
+		MD5_LIST=$(shell curl -s https://raw.githubusercontent.com/AIMROM/android_vendor_aim/o/config/md5.list)
+		FILTER_MD5=$(filter $(CURRENT_MD5), $(MD5_LIST))
+		ifeq ($(FILTER_MD5), $(CURRENT_MD5))
+			CHECKS=true
+			AIM_BUILD_TYPE := OFFICIAL
+		else
+			CHECKS=false
+			AIM_BUILD_TYPE := UNOFFICIAL
+		endif
+	endif
+else
+	AIM_BUILD_TYPE := UNOFFICIAL
+endif
 
 # Set all versions
 AIM_VERSION := AIM-$(AIM_BASE_VERSION)-$(shell date -u +%Y%m%d)-$(AIM_BUILD_TYPE)-$(AIM_BUILD)
