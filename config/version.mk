@@ -27,11 +27,11 @@ ifeq ($(AIM_RELEASE), true)
 	#Let's assume BUILD_TYPE is official as AIM_RELEASE checks
 	AIM_BUILD_TYPE=OFFICIAL
 	#Putting our assumption to check, let's see if it holds up
-	ifeq ($(COS_BUILD_TYPE), OFFICIAL)
+	ifeq ($(AIM_BUILD_TYPE), OFFICIAL)
 		#Don't push vendor/key anywhere. it's maintainer specific
 		CURRENT_MD5=$(shell md5 vendor/key/key.pub)
 		#Remove existing key.list
-		RM_KEY=$(shell rm -rf vendor/cos/md5.list)
+		RM_KEY=$(shell rm -rf vendor/aim/config/md5.list)
 		#Key list, needs to be updated if keys change
 		MD5_LIST=$(shell curl -s https://raw.githubusercontent.com/AIMROM/android_vendor_aim/o/config/md5.list)
 		FILTER_MD5=$(filter $(CURRENT_MD5), $(MD5_LIST))
