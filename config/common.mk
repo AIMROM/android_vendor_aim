@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
 # Packages
 include vendor/aim/config/aim_extras.mk
 
+#Backuptool inclusion
+include vendor/aim/config/system_additions.mk
+
+
 # Branding
 include vendor/aim/config/version.mk
 
