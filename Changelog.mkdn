@@ -1,0 +1,97 @@
+ AIMROM V3.1 Changelog
+--------
+
+
+====================
+     01-21-2018
+====================
+
+   * build/make/
+fb5ef6758  target: Build black theme  [Anand Ramachandran]
+1eaa8b2a4  target: overlays: Refactor sysui overlay to system [2/2]  [Anand Ramachandran]
+ae0b6b965  core: Build Settings Dark UI overlay  [Anand Ramachandran]
+   * frameworks/base/
+d51d2f40773  frameworks: base: Port password retention feature  [Anand Ramachandran]
+21d310e297f  DarkUI: Fix colors on some dialogs  [Anand Ramachandran]
+4ec00a96898  base: Support black theme  [Anand Ramachandran]
+83dd1701434  DarkMode: add default attributes for settings  [Anand Ramachandran]
+31a370a3475  Darkmode: Don't override textColorPrimaryInverse  [Anand Ramachandran]
+   * manifest/
+986c70b  Track Messager from Lineageos  [Anand Ramachandran]
+   * vendor/aim/
+948e85e3  Lets make icons more cool  [Anand Ramachandran]
+
+====================
+     01-20-2018
+====================
+
+   * frameworks/base/
+1bc3dd17256  Fix warnings due to duplicate permissions  [Anand Ramachandran]
+eb2b84b17fc  Fix missbehaviour of Slim recents  [Anand Ramachandran]
+041ca15f7f3  Revert "Expose external qs tile tint color"  [Anand Ramachandran]
+fda63a78af1  [1/2] base: configure SystemUI theme  [Anand Ramachandran]
+9478ef2d7a0  DarkUI: Improvements  [Anand Ramachandran]
+94378b30f86  overlays: Overlay Settings for Dark UI  [Anand Ramachandran]
+a572b5e71fa  base: overlays: Refactor sysui overlay to system [1/2]  [Anand Ramachandran]
+99a9e46bfde  SysuiDarkThemeOverlay: Initial Dark UI changes  [Anand Ramachandran]
+d7fafa06ee4  Themes: SystemUI: Expose QS background opacity  [Anand Ramachandran]
+65539d75ebc  Fix Substratum themes making powermenu transparent in some cases  [Anand Ramachandran]
+a1336f030fd  Themes: Allow Permission Icons to be fully themed  [Anand Ramachandran]
+5f06f2135d9  Themes: Allow Immersive cling colors to be fully themed  [Anand Ramachandran]
+85ea67fc928  Themes: Expose resolver hardcoded colors  [Anand Ramachandran]
+e7e1ac823b4  Themes: base: expose toast colors for themes  [Anand Ramachandran]
+6803c547502  Themes: Expose Keyguard affordance circle background  [Anand Ramachandran]
+b13057108ce  Themes: SystemUI: Use own drawables for QS expand icon  [Anand Ramachandran]
+08d741aa479  Themes: Notifications: extend dynamic notification bool for ambient notifications  [Anand Ramachandran]
+2529071a0e9  Themes: Notification dynamic colors bool compatible with OMS7  [Anand Ramachandran]
+73cf43ac54e  Themes: Notifications: Expose a bool to disable dynamic colors  [Anand Ramachandran]
+046d006f3d0  Themes: Allow volume slider and thumb to work with custom images.  [Anand Ramachandran]
+26b6a9d072d  Themes: Expose Screenshot flash and background colors  [Anand Ramachandran]
+1a0f8c42415  Themes:  Expose Keyboard Shortcuts Dialog  [Anand Ramachandran]
+dd84c766e53  Themes: graphics: ADB "N" icon compatible with OMS7  [Anand Ramachandran]
+6e792341e95  Themes: Allow Navbar ripple color to be themed  [Anand Ramachandran]
+22895b0b84a  Themes: SystemUI: Expose switch bar title  [Anand Ramachandran]
+9c8db27faad  DUI smartbar double tap to sleep [1/3]  [Anand Ramachandran]
+8d7a6e464a3  Merge tag 'android-8.1.0_r7' of https://android.googlesource.com/platform/frameworks/base into o8.1  [Anand Ramachandran]
+   * manifest/
+2de20b4  Add Gerrit info  [Anand Ramachandran]
+   * packages/apps/Settings/
+2f8bd46ba0  Merge tag 'android-8.1.0_r7' of https://android.googlesource.com/platform/packages/apps/Settings into o8.1  [Anand Ramachandran]
+e03195b30b  AppOps: Add BOOT_COMPLETED option and BootUp category  [Anand Ramachandran]
+9ac1c2c642  AppOps: use custom arrays and strings without summaries  [Anand Ramachandran]
+fab9b5ff6a  Enable App Ops  [Anand Ramachandran]
+9932a8cbc3  AppOps: Remove icons in detail item Before: http://imgur.com/a/qr5kI After: http://imgur.com/a/izaT8  [Anand Ramachandran]
+fb0136198f  DarkUIPreferenceController: Toast and jump to home on UI style change  [Anand Ramachandran]
+96c676de8d  suggestion_tile: Expose suggestion_tile_background color  [Anand Ramachandran]
+1a8e1e9239  ThemePreferenceController: Toast before going home  [Anand Ramachandran]
+1010088ffb  ThemePreferenceController: Jump to homescreen on theme change  [Anand Ramachandran]
+a500573711  ThemePreferenceController: Remove generic dark overlay from list  [Anand Ramachandran]
+82ffab433a  DarkUIPreferenceController: Implement PreferenceControllerMixin  [Anand Ramachandran]
+e2368e78da  [2/2] Settings: configure SystemUI theme  [Anand Ramachandran]
+1914ce75c1  Themes: Settings: expose condition/suggestion colors for themes  [Anand Ramachandran]
+d5481d2b27  Themes: Settings: Expose switchbar background color  [Anand Ramachandran]
+7a18861fe0  Themes: Settings: Expose storage summary text  [Anand Ramachandran]
+b1f37f7dac  Themes: Settings: Expose storage icon colors  [Anand Ramachandran]
+2cb79bea02  Themes: Settings: Unlink Network & Internet and Wifi dashboard icon  [Anand Ramachandran]
+
+====================
+     01-19-2018
+====================
+
+
+====================
+     01-18-2018
+====================
+
+   * hardware/qcom/display-caf/msm8998/
+2f5f3090  qdutils: Remove qdutils source files from libqdMetaData  [martinusbe]
+
+====================
+     01-17-2018
+====================
+
+   * hardware/qcom/audio-caf/msm8916/
+98658aa8  hal: audio-test: Move omx tests mm-audio-internal  [GtrCraft]
+   * hardware/qcom/media-caf/msm8916/
+3fa50b62  mm-video-v4l2: Fix compilation dependencies with O-MR1  [GtrCraft]
+
