@@ -52,6 +52,9 @@ type Product_variables struct {
 	}
 	Target_surfaceflinger_fod_lib struct {
 		Cflags []string
+        }
+	Target_surfaceflinger_fod_lib struct {
+		Cflags []string
 		Whole_static_libs []string
 	}
 	Uses_generic_camera_parameter_library struct {
@@ -86,6 +89,7 @@ type ProductVariables struct {
 	Target_needs_netd_direct_connect_rule  *bool `json:",omitempty"`
 	Target_process_sdk_version_override  *string `json:",omitempty"`
 	Target_shim_libs  *string `json:",omitempty"`
+	Target_camera_needs_client_info  *bool `json:",omitempty"`
 	Target_surfaceflinger_fod_lib  *string `json:",omitempty"`
 	Uses_generic_camera_parameter_library  *bool `json:",omitempty"`
 	Uses_nvidia_enhancements  *bool `json:",omitempty"`
